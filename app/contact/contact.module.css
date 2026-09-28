@@ -1,0 +1,182 @@
+/*
+ * Contact page, laid out after the Digtek template's /contact route:
+ * breadcrumb → three info cards → map beside the enquiry form.
+ * Shared tokens and pieces come from app/services/services.module.css.
+ */
+
+/* ---------- Info cards ---------- */
+.infoGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 992px) {
+  .infoGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.infoCard {
+  height: 100%;
+  padding: 40px 20px;
+  border-radius: 10px;
+  background: #f9f6ec;
+  text-align: center;
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+.infoCard:hover {
+  transform: translateY(-4px);
+}
+.infoIcon {
+  display: inline-flex;
+  color: var(--dark);
+}
+.infoIcon svg {
+  width: 72px;
+  height: 72px;
+}
+.infoContent {
+  margin-top: 30px;
+}
+.infoGrid .infoCard h3 {
+  font-size: clamp(18px, 5vw, 24px);
+}
+.infoCard h3 a {
+  color: var(--ink);
+  transition: color 0.4s ease-in-out;
+  overflow-wrap: break-word;
+}
+.infoCard h3 a:hover {
+  color: var(--accent-text);
+}
+.infoCard .infoText {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ---------- Map + form ---------- */
+.contactSection {
+  padding-top: 0;
+}
+.contactRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .contactRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.mapFrame {
+  display: block;
+  width: 100%;
+  height: 660px;
+  border: 0;
+  border-radius: 16px;
+}
+@media (max-width: 767px) {
+  .mapFrame {
+    height: 450px;
+  }
+}
+@media (max-width: 575px) {
+  .mapFrame {
+    height: 360px;
+  }
+}
+.contactContent {
+  margin-left: 40px;
+}
+@media (max-width: 991px) {
+  .contactContent {
+    margin-left: 0;
+  }
+}
+.contactRow .contactContent h2 {
+  margin-bottom: 10px;
+}
+.formItems {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+@media (min-width: 992px) {
+  .formItems {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.full {
+  grid-column: 1 / -1;
+}
+.formClt label {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.formClt input,
+.formClt textarea {
+  width: 100%;
+  padding: 18px 20px;
+  border: 1px solid #ddd6c2;
+  border-radius: 5px;
+  background-color: transparent;
+  font: inherit;
+  line-height: 1.5;
+  color: var(--ink-2);
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+.formClt textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+.formClt input::placeholder,
+.formClt textarea::placeholder {
+  color: var(--ink-dim);
+}
+.formClt input:focus,
+.formClt textarea:focus {
+  border-color: var(--accent);
+}
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 30px;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--dark);
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+.submitBtn:hover {
+  background-color: var(--accent);
+  color: var(--accent-ink);
+}
+.submitBtn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.submitBtn svg {
+  width: 16px;
+  height: 16px;
+}
+.formNote {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--ink-dim);
+}

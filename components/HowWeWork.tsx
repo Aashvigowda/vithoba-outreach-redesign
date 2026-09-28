@@ -7,7 +7,7 @@ const stepIcons = [IconSearch, IconCalendarCheck, IconCompass, IconSprout];
 
 export default function HowWeWork() {
   return (
-    <section className="bg-dark py-20 text-on-dark md:py-28">
+    <section className="bg-dark py-12 text-on-dark md:py-16">
       <div className="wrap">
         <SectionHeader
           center
@@ -23,10 +23,10 @@ export default function HowWeWork() {
             </>
           }
           description="The same four stages, every time — so nothing gets lost between strategy and execution."
-          className="mb-16"
+          className="mb-10"
         />
 
-        <div className="relative mb-14 flex items-center justify-between px-1 sm:px-2">
+        <div className="relative mb-10 flex items-center justify-between px-1 sm:px-2">
           <div
             aria-hidden="true"
             className="absolute left-7 right-7 top-1/2 h-px -translate-y-1/2 bg-accent-bright/50 sm:left-8 sm:right-8"

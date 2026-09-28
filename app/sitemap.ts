@@ -4,7 +4,7 @@ import { blogPosts, industries, services, site } from "@/lib/content";
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date("2026-09-18");
 
-  const staticRoutes = ["", "/about", "/services", "/blog"].map((path) => ({
+  const staticRoutes = ["", "/about", "/services", "/contact", "/blog"].map((path) => ({
     url: `${site.domain}${path}`,
     lastModified,
   }));

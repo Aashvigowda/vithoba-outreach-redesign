@@ -1,12 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import PageHero from "@/components/PageHero";
-import SectionHeader from "@/components/SectionHeader";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
-import CTASection from "@/components/CTASection";
+import CountUp from "@/components/CountUp";
 import JsonLd from "@/components/JsonLd";
+import ServicesBanner from "@/components/ServicesBanner";
+import AboutApproachSlider from "@/components/AboutApproachSlider";
+import AboutPromiseSlider from "@/components/AboutPromiseSlider";
+import {
+  IconCalendarCheck,
+  IconCompass,
+  IconFilter,
+  IconMegaphone,
+  IconSearch,
+  IconShare,
+  IconSparkle,
+  IconTrendingUp,
+} from "@/components/icons";
 import { breadcrumbSchema } from "@/lib/schema";
-import { process } from "@/lib/content";
+import { industries, process, services, waLink, waMessages } from "@/lib/content";
+import { jakarta } from "../services/fonts";
+import shared from "../services/services.module.css";
+import styles from "./about.module.css";
 
 export const metadata: Metadata = {
   title: "About Vithoba Outreach | Digital Marketing Agency in Mysuru",
@@ -30,15 +45,45 @@ const standFor = [
   },
 ];
 
-const whyUs = [
-  "One accountable partner instead of several freelancers",
-  "Clear packages, with ad spend billed separately and transparently",
-  "Monthly reporting and strategy calls",
+const values = [
+  { title: "Clarity", text: "Know what we're trying to achieve.", Icon: IconCompass },
+  { title: "Creativity", text: "Make the business impossible to ignore.", Icon: IconSparkle },
+  { title: "Conversion", text: "Turn attention into action.", Icon: IconFilter },
+  { title: "Learning", text: "Use performance to improve the next move.", Icon: IconTrendingUp },
 ];
+
+const counters = [
+  { value: services.length, label: "Growth Disciplines" },
+  { value: process.length, label: "Stage Process" },
+  { value: industries.length, label: "Industry Specialisms" },
+];
+
+function ArrowUpRight() {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M4.5 11.5l7-7M5.5 4.5h6v6" />
+    </svg>
+  );
+}
+
+function Waves({ className, count = 16 }: { className: string; count?: number }) {
+  return (
+    <svg className={className} viewBox="0 0 1920 340" preserveAspectRatio="none" fill="none" aria-hidden="true">
+      {Array.from({ length: count }, (_, i) => (
+        <path
+          key={i}
+          d={`M0 ${120 + i * 8}C300 ${20 + i * 6} 600 ${360 - i * 6} 900 ${200 - i * 4}S1500 ${-20 + i * 9} 1920 ${140 + i * 10}`}
+          stroke="#fff"
+          strokeOpacity=".07"
+        />
+      ))}
+    </svg>
+  );
+}
 
 export default function AboutPage() {
   return (
-    <>
+    <div className={`${jakarta.variable} ${shared.page}`}>
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
@@ -46,102 +91,243 @@ export default function AboutPage() {
         ])}
       />
 
-      <PageHero
-        eyebrow="About Vithoba Outreach"
-        breadcrumb={[{ name: "Home", href: "/" }, { name: "About" }]}
-        title={
-          <>
-            WE BELIEVE
-            <br />
-            MARKETING SHOULD
-            <br />
-            <span className="text-accent">MOVE BUSINESS.</span>
-          </>
-        }
-        description="Vithoba Outreach is a digital marketing studio based in Mysuru, Karnataka. We plan, build and run the marketing engine for ambitious Indian businesses: strategy, content, ads and automation working as one system."
+      <ServicesBanner
+        title="About Us"
+        crumbs={[{ name: "Home", href: "/" }, { name: "About Us" }]}
       />
 
-      {/* WHAT WE STAND FOR */}
-      <section className="wrap border-t border-line py-24 md:py-32">
-        <SectionHeader eyebrow="What We Stand For" heading="Trust the strategy, grow with Vithoba." className="mb-14" />
-        <div className="grid gap-10 md:grid-cols-3">
-          {standFor.map((item, i) => (
-            <Reveal key={item.title} delay={i * 90}>
-              <p className="font-mono-vo mb-3 text-xs uppercase tracking-widest text-accent">
-                {String(i + 1).padStart(2, "0")}
-              </p>
-              <h3 className="font-display text-xl font-bold text-ink md:text-2xl">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-ink-2">{item.text}</p>
+      {/* 1. About split */}
+      <section className={`${styles.aboutSection} ${shared.sectionPadding}`}>
+        <div className={shared.container}>
+          <div className={styles.aboutRow}>
+            <Reveal>
+              <div className={styles.aboutImage}>
+                <div className={styles.archPhoto}>
+                  <Image
+                    src="/hero-visual.png"
+                    alt="Laptop and phone showing marketing performance dashboards, surrounded by social, ads and email icons"
+                    fill
+                    priority
+                    sizes="(min-width: 992px) 537px, 100vw"
+                  />
+                </div>
+                <div className={styles.boxShape} aria-hidden="true">
+                  <svg width="150" height="118" viewBox="0 0 150 118" fill="none">
+                    <rect x=".5" y=".5" width="149" height="117" rx="14" fill="#fff" stroke="#e5e5e5" />
+                    <text x="18" y="32" fontSize="12" fill="#4d5445" fontFamily="inherit">Monthly report</text>
+                    <rect x="18" y="74" width="14" height="26" rx="3" fill="#c9971f" fillOpacity=".5" />
+                    <rect x="42" y="62" width="14" height="38" rx="3" fill="#c9971f" fillOpacity=".75" />
+                    <rect x="66" y="50" width="14" height="50" rx="3" fill="#12341f" />
+                    <rect x="90" y="58" width="14" height="42" rx="3" fill="#c9971f" />
+                    <rect x="114" y="44" width="14" height="56" rx="3" fill="#12341f" />
+                  </svg>
+                </div>
+                <div className={styles.gapShape} aria-hidden="true">
+                  <svg width="190" height="120" viewBox="0 0 190 120" fill="none">
+                    <rect x=".5" y=".5" width="189" height="119" rx="14" fill="#fff" stroke="#e5e5e5" />
+                    <text x="18" y="30" fontSize="12" fill="#4d5445" fontFamily="inherit">Enquiries</text>
+                    <path d="M18 92c20-2 26-26 46-26s24 16 44 14 22-38 64-40" stroke="#12341f" strokeWidth="3" strokeLinecap="round" />
+                    <path d="M18 100c24 0 34-12 52-14s26 6 46 2 30-22 56-26" stroke="#c9971f" strokeWidth="3" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <Link href="/services" className={styles.circleButton} aria-label="See our services">
+                  <ArrowUpRight />
+                  <span className={styles.textCircle} aria-hidden="true">
+                    <svg viewBox="0 0 110 110">
+                      <defs>
+                        <path id="about-text-circle" d="M55 55m-43 0a43 43 0 1 1 86 0a43 43 0 1 1-86 0" />
+                      </defs>
+                      <text fontSize="10.5" fontWeight="700" letterSpacing="2.4" fill="#14150e">
+                        <textPath href="#about-text-circle">VITHOBA OUTREACH • MYSURU • </textPath>
+                      </text>
+                    </svg>
+                  </span>
+                </Link>
+              </div>
             </Reveal>
-          ))}
+
+            <div className={styles.aboutContent}>
+              <div className={shared.sectionTitle}>
+                <Reveal>
+                  <div className={shared.subTitle}>
+                    <span>About Vithoba Outreach</span>
+                  </div>
+                </Reveal>
+                <Reveal delay={150}>
+                  <h2>We believe marketing should move business.</h2>
+                </Reveal>
+              </div>
+              <Reveal delay={250}>
+                <p>
+                  Vithoba Outreach is a digital marketing studio based in Mysuru, Karnataka.
+                  We plan, build and run the marketing engine for ambitious Indian businesses:
+                  strategy, content, ads and automation working as one system. We work with{" "}
+                  <Link href="/industries/real-estate">real estate</Link>,{" "}
+                  <Link href="/industries/construction">construction</Link> and local businesses
+                  across Mysuru and India.
+                </p>
+              </Reveal>
+              <div className={styles.iconItemsArea}>
+                {[
+                  { ...standFor[0], Icon: IconSearch },
+                  { ...standFor[1], Icon: IconCalendarCheck },
+                ].map(({ title, text, Icon }, i) => (
+                  <Reveal key={title} delay={i * 150}>
+                    <div className={styles.iconItems}>
+                      <div className={styles.iconBox} aria-hidden="true">
+                        <Icon />
+                      </div>
+                      <h3>{title}</h3>
+                      <p>{text}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+              <Reveal>
+                <div className={styles.aboutButton}>
+                  <Link href="/services" className={shared.mainButton}>
+                    <span className={shared.themeBtn}>Our Services</span>
+                    <span className={shared.arrowBtn}>
+                      <ArrowUpRight />
+                    </span>
+                  </Link>
+                  <a
+                    href={waLink(waMessages.bookCall)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.textLink}
+                  >
+                    Book a Free Call
+                  </a>
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* PROCESS TIMELINE */}
-      <section className="wrap border-t border-line py-24 md:py-32">
-        <SectionHeader
-          eyebrow="Our Approach"
-          heading="Discover. Plan. Launch. Grow."
-          description="The same four stages every time, so nothing gets lost between strategy and execution."
-          className="mb-16"
-        />
-        <div className="relative grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
-          {process.map((step, i) => (
-            <Reveal key={step.step} delay={i * 100} className="relative pl-8">
-              <span
-                aria-hidden
-                className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-accent"
+      {/* 2. Counter band */}
+      <section className={`${styles.counterSection} ${shared.sectionPadding}`}>
+        <Waves className={styles.counterWaves} />
+        <div className={shared.container}>
+          <div className={styles.titleArea}>
+            <div className={shared.sectionTitle}>
+              <Reveal>
+                <div className={`${shared.subTitle} ${shared.subTitleLight}`}>
+                  <span>At a Glance</span>
+                </div>
+              </Reveal>
+              <Reveal delay={150}>
+                <h2>
+                  Strategy, creative and
+                  <br /> performance, as one system
+                </h2>
+              </Reveal>
+            </div>
+            <div className={styles.counterBoxArea}>
+              {counters.map((c, i) => (
+                <Reveal key={c.label} delay={i * 150}>
+                  <div className={styles.counterText}>
+                    <CountUp value={c.value} className={styles.counterNumber} />
+                    <p>{c.label}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+          <Reveal>
+            <div className={styles.videoImage}>
+              <Image
+                src="/hero-visual.png"
+                alt="A marketing workspace: laptop and phone dashboards with social, search and email channel icons"
+                fill
+                sizes="(min-width: 1320px) 1290px, 100vw"
               />
-              <span
-                aria-hidden
-                className="absolute left-[3.5px] top-4 hidden h-[calc(100%+3.5rem)] w-px bg-line-strong lg:block"
-              />
-              <p className="font-mono-vo text-xs uppercase tracking-widest text-ink-dim">
-                Step {step.step}
-              </p>
-              <h3 className="mt-2 font-display text-2xl font-bold text-ink">
-                {step.name}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink-2">
-                {step.text}
-              </p>
-            </Reveal>
-          ))}
+              <a
+                href={waLink(waMessages.knowMore)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.videoIcon}
+                aria-label="Start a conversation with Vithoba Outreach on WhatsApp"
+              >
+                <ArrowUpRight />
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* INDUSTRIES WE SERVE */}
-      <section className="wrap border-t border-line py-24 md:py-32">
-        <SectionHeader eyebrow="Who We Work With" heading="Industries we serve" className="mb-10" />
-        <Reveal>
-          <p className="max-w-xl text-ink-2">
-            <Link href="/industries/real-estate" className="underline-link text-ink hover:text-accent">
-              Real estate
-            </Link>
-            ,{" "}
-            <Link href="/industries/construction" className="underline-link text-ink hover:text-accent">
-              construction
-            </Link>{" "}
-            and local businesses across Mysuru and India.
-          </p>
-        </Reveal>
-      </section>
-
-      {/* WHY BUSINESSES WORK WITH US */}
-      <section className="wrap border-t border-line py-24 md:py-32">
-        <SectionHeader eyebrow="Why Vithoba" heading="Why businesses work with us" className="mb-12" />
-        <ul className="grid gap-6 md:grid-cols-3">
-          {whyUs.map((item, i) => (
-            <Reveal key={item} delay={i * 90}>
-              <li className="border-t border-line pt-5 text-ink-2">{item}</li>
+      {/* 3. Values */}
+      <section className={`${styles.valueSection} ${shared.sectionPadding}`}>
+        <div className={shared.container}>
+          <div className={`${shared.sectionTitle} ${styles.valueTitle}`}>
+            <Reveal>
+              <h2>Our values</h2>
             </Reveal>
-          ))}
-        </ul>
+          </div>
+          <div className={styles.valueGrid}>
+            {values.map(({ title, text, Icon }, i) => (
+              <Reveal key={title} delay={i * 100}>
+                <div className={styles.valueBox}>
+                  <div className={styles.iconBox} aria-hidden="true">
+                    <Icon />
+                  </div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </section>
 
-      <CTASection />
-    </>
+      {/* 4. Team-style slider, carrying the real 4-step approach */}
+      <section className={shared.sectionPadding}>
+        <div className={shared.container}>
+          <AboutApproachSlider
+            title={
+              <>
+                <div className={shared.sectionTitle}>
+                  <div className={shared.subTitle}>
+                    <span>Our Approach</span>
+                  </div>
+                  <h2>
+                    Discover. Plan.
+                    <br /> Launch. Grow.
+                  </h2>
+                </div>
+                <p>
+                  The same four stages every time, so nothing gets lost between
+                  strategy and execution.
+                </p>
+              </>
+            }
+          />
+        </div>
+      </section>
+
+      {/* 5. Centred quote slider, carrying what we stand for */}
+      <section className={`${styles.quoteSection} ${shared.sectionPadding}`}>
+        <div className={shared.container}>
+          <div className={styles.quoteWrapper}>
+            <div className={styles.client1} aria-hidden="true"><IconShare /></div>
+            <div className={styles.client2} aria-hidden="true"><IconMegaphone /></div>
+            <div className={styles.client3} aria-hidden="true"><IconSearch /></div>
+            <div className={styles.client4} aria-hidden="true"><IconTrendingUp /></div>
+            <div className={styles.quoteContent}>
+              <div className={shared.subTitle}>
+                <span>What We Stand For</span>
+              </div>
+              <div className={styles.quoteIcon} aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="currentColor">
+                  <path d="M10 36c-3-3-4-6-4-10 0-7 5-13 12-16l2 3c-5 3-7 6-7 9 1 0 2-1 3-1 4 0 7 3 7 7s-3 8-7 8c-3 0-5-1-6 0Zm20 0c-3-3-4-6-4-10 0-7 5-13 12-16l2 3c-5 3-7 6-7 9 1 0 2-1 3-1 4 0 7 3 7 7s-3 8-7 8c-3 0-5-1-6 0Z" />
+                </svg>
+              </div>
+              <AboutPromiseSlider items={standFor} />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

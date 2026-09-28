@@ -7,20 +7,13 @@ import SectionHeader from "@/components/SectionHeader";
 import MarketingOrbit from "@/components/MarketingOrbit";
 import FAQAccordion from "@/components/FAQAccordion";
 import ServicesShowcase from "@/components/ServicesShowcase";
-import Carousel from "@/components/Carousel";
 import HowWeWork from "@/components/HowWeWork";
 import CallbackForm from "@/components/CallbackForm";
+import WhyChooseVithoba from "@/components/WhyChooseVithoba";
 import HeroSearch from "@/components/HeroSearch";
 import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
-import {
-  blogPosts,
-  homeFaqs,
-  industries,
-  site,
-  waLink,
-  waMessages,
-} from "@/lib/content";
+import { homeFaqs, site, waLink, waMessages } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Digital Marketing Agency in Mysuru | Vithoba Outreach",
@@ -79,7 +72,7 @@ export default function HomePage() {
       </section>
 
       {/* FULL-BLEED SERVICES SHOWCASE */}
-      <section className="py-16 md:py-20">
+      <section className="py-10 md:py-12">
         <div className="wrap">
           <SectionHeader
             center
@@ -90,10 +83,10 @@ export default function HomePage() {
               </>
             }
             description="Everything Vithoba Outreach can plan, design and run for your brand — built to work together, not in silos."
-            className="mb-12"
+            className="mb-8"
           />
           <ServicesShowcase />
-          <Reveal className="mt-10">
+          <Reveal className="mt-8">
             <Link
               href="/services"
               className="underline-link font-mono-vo text-xs font-semibold uppercase tracking-widest text-ink hover:text-accent"
@@ -107,7 +100,7 @@ export default function HomePage() {
       <HowWeWork />
 
       {/* PULL QUOTE */}
-      <section className="relative overflow-hidden py-14 md:py-16">
+      <section className="relative overflow-hidden py-8 md:py-10">
         <div
           aria-hidden="true"
           className="blob left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 bg-accent/10"
@@ -130,7 +123,7 @@ export default function HomePage() {
       </section>
 
       {/* MARKETING ORBIT / SILOS */}
-      <section className="wrap py-14 md:py-16">
+      <section className="wrap py-8 md:py-10">
         <div className="grid gap-12 lg:grid-cols-[minmax(280px,1fr)_minmax(360px,1.15fr)] lg:items-center lg:gap-16">
           <SectionHeader
             eyebrow="How It Connects"
@@ -148,134 +141,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* INDUSTRIES */}
-      <section className="bg-dark py-16 text-on-dark md:py-20">
-        <div className="wrap">
-        <SectionHeader
-          center
-          dark
-          eyebrow="Industry Expertise"
-          heading="Every industry plays a different game."
-          className="mb-12"
-        />
-        <div className="grid gap-6 md:grid-cols-2">
-          {industries.map((industry, i) => (
-            <Reveal key={industry.slug} delay={i * 100}>
-              <Link
-                href={`/industries/${industry.slug}`}
-                className="group block h-full rounded-3xl border border-dark-line bg-dark-2/50 p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-accent-bright hover:shadow-[0_20px_44px_rgba(0,0,0,0.35)]"
-              >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent-bright">
-                  {industry.slug === "real-estate" ? (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-                      <path d="M4 21V10.5L12 4l8 6.5V21" />
-                      <path d="M9 21v-6h6v6" />
-                    </svg>
-                  ) : (
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-                      <path d="M4 16a8 8 0 0 1 16 0" />
-                      <path d="M2.5 16h19" />
-                      <path d="M12 16V8" />
-                    </svg>
-                  )}
-                </div>
-                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                  {industry.journey.map((stage, idx) => (
-                    <span key={stage} className="flex items-center gap-2">
-                      <span className="font-mono-vo text-[11px] uppercase tracking-widest text-on-dark-dim">
-                        {stage}
-                      </span>
-                      {idx < industry.journey.length - 1 && (
-                        <span className="text-accent-bright" aria-hidden>
-                          →
-                        </span>
-                      )}
-                    </span>
-                  ))}
-                </div>
-                <h3 className="mt-5 font-display text-2xl font-bold text-on-dark md:text-3xl">
-                  {industry.slug === "real-estate" ? "Real Estate" : "Construction"}
-                </h3>
-                <ul className="mt-5 flex flex-wrap gap-2">
-                  {industry.whatWeDo.slice(0, 3).map((item) => (
-                    <li
-                      key={item}
-                      className="rounded-full border border-dark-line px-3 py-1.5 text-xs text-on-dark-dim"
-                    >
-                      {item.split(" ").slice(0, 3).join(" ")}
-                    </li>
-                  ))}
-                </ul>
-                <span className="mt-6 inline-flex items-center gap-2 font-mono-vo text-xs uppercase tracking-widest text-accent-bright transition-transform duration-300 group-hover:translate-x-1">
-                  Explore →
-                </span>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-        </div>
-      </section>
-
-      {/* INSIGHTS — moved above FAQ; card style referenced from a SolutionBuggy
-          ads-page carousel (photo band + badge + title + CTA), rebuilt here
-          with real Vithoba content only: no invented photos or claims. */}
-      <section className="wrap py-16 md:py-20">
-        <div className="mb-12">
-          <SectionHeader
-            center
-            eyebrow="Insights"
-            heading="Insights that grow traffic & revenue."
-            className="mb-6"
-          />
-          <div className="text-center">
-            <Link
-              href="/blog"
-              className="underline-link font-mono-vo text-xs font-semibold uppercase tracking-widest text-ink hover:text-accent"
-            >
-              See All Insights →
-            </Link>
-          </div>
-        </div>
-        <Carousel
-          ariaLabel="Insights"
-          items={blogPosts.map((post, i) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface transition-all duration-300 hover:-translate-y-1.5 hover:border-accent hover:shadow-[0_20px_44px_rgba(18,24,18,0.10)]"
-            >
-              <div className="relative h-40 overflow-hidden bg-gradient-to-br from-dark to-dark-2 sm:h-44">
-                <span className="absolute left-4 top-4 rounded-full bg-accent px-3 py-1 font-mono-vo text-[10px] font-bold uppercase tracking-widest text-accent-ink">
-                  {post.category}
-                </span>
-                <span className="font-mono-vo absolute right-4 top-4 text-xs text-on-dark-dim/70">
-                  Insights / {String(i + 1).padStart(2, "0")}
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="font-display absolute -bottom-6 -right-2 text-8xl text-on-dark/10"
-                >
-                  &ldquo;
-                </span>
-              </div>
-              <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-display text-xl font-bold leading-tight text-ink md:text-2xl">
-                  {post.title}
-                </h3>
-                <p className="mt-3 flex-1 text-sm text-ink-2">{post.excerpt}</p>
-                <span className="mt-5 inline-flex w-fit items-center gap-2 rounded-full border border-line-strong px-4 py-2 text-xs font-semibold text-ink transition-colors group-hover:border-accent group-hover:text-accent">
-                  Read Article →
-                </span>
-              </div>
-            </Link>
-          ))}
-        />
-      </section>
+      <WhyChooseVithoba />
 
       <CallbackForm />
 
       {/* FAQ */}
-      <section className="wrap py-16 md:py-20">
+      <section className="wrap py-10 md:py-12">
         <SectionHeader
           center
           eyebrow="FAQ"
@@ -288,12 +159,12 @@ export default function HomePage() {
             </>
           }
           description="Can't find what you're looking for? Reach out and we'll get back to you."
-          className="mb-12"
+          className="mb-8"
         />
         <div className="mx-auto max-w-3xl">
           <FAQAccordion items={homeFaqs} />
         </div>
-        <Reveal delay={120} className="mt-10 flex justify-center gap-4">
+        <Reveal delay={120} className="mt-8 flex justify-center gap-4">
           <Button href="/services" variant="outline">
             View Services
           </Button>

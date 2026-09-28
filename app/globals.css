@@ -127,8 +127,11 @@
   color: var(--accent-ink);
 }
 
-a {
-  color: inherit;
+/* In the base layer so Tailwind text-color utilities on links still win. */
+@layer base {
+  a {
+    color: inherit;
+  }
 }
 
 /*

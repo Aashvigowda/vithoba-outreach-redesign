@@ -142,7 +142,7 @@ export default function Footer() {
               { href: "/industries/real-estate", label: "Industries" },
               { href: "/about", label: "About" },
               { href: "/blog", label: "Insights" },
-              { href: "/#contact", label: "Contact Us" },
+              { href: "/contact", label: "Contact Us" },
             ]}
           />
 
