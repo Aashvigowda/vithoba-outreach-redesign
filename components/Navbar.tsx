@@ -190,7 +190,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="wrap flex flex-col gap-6 border-t border-line bg-surface py-8 md:hidden">
+        <div className={`wrap flex flex-col gap-6 border-t border-line bg-surface py-8 md:hidden ${styles.mobilePanel}`}>
           {navItems.map((item) =>
             item.href === "/services" ? (
               <div key={item.href}>
