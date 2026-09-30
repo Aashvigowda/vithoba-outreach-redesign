@@ -65,14 +65,11 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="Vithoba Outreach"
-            width={34}
-            height={34}
+            width={96}
+            height={96}
             priority
-            className="h-8 w-8 rounded-full object-cover"
+            className="h-12 w-12 rounded-full object-cover"
           />
-          <span className="hidden font-display text-sm font-bold tracking-tight text-ink sm:inline">
-            Vithoba Outreach
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm font-medium text-ink-2 md:flex">

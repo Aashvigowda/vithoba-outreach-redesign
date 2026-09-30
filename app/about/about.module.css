@@ -44,7 +44,7 @@
 }
 .archPhoto img {
   object-fit: cover;
-  object-position: 62% center;
+  object-position: center bottom;
 }
 .boxShape {
   position: absolute;
@@ -283,17 +283,14 @@
 }
 .videoImage {
   position: relative;
-  aspect-ratio: 1290 / 560;
+  aspect-ratio: 1672 / 941;
+  background: #f3ead8;
   border-radius: 20px;
   overflow: hidden;
 }
-@media (max-width: 767px) {
-  .videoImage {
-    aspect-ratio: 4 / 3;
-  }
-}
 .videoImage img {
   object-fit: cover;
+  object-position: center;
 }
 .videoIcon {
   position: absolute;

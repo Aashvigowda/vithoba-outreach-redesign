@@ -104,11 +104,11 @@ export default function AboutPage() {
               <div className={styles.aboutImage}>
                 <div className={styles.archPhoto}>
                   <Image
-                    src="/hero-visual.png"
-                    alt="Laptop and phone showing marketing performance dashboards, surrounded by social, ads and email icons"
+                    src="/about-team.png"
+                    alt="The Vithoba Outreach team reviewing campaign results together on a laptop"
                     fill
                     priority
-                    sizes="(min-width: 992px) 537px, 100vw"
+                    sizes="(min-width: 992px) 700px, 100vw"
                   />
                 </div>
                 <div className={styles.boxShape} aria-hidden="true">
@@ -238,8 +238,8 @@ export default function AboutPage() {
           <Reveal>
             <div className={styles.videoImage}>
               <Image
-                src="/hero-visual.png"
-                alt="A marketing workspace: laptop and phone dashboards with social, search and email channel icons"
+                src="/about-glance.png"
+                alt="Desk with a laptop showing a performance dashboard, a target and Strategy, Growth and Industry Specialisms icons, and a notebook reading Plan, Execute, Grow"
                 fill
                 sizes="(min-width: 1320px) 1290px, 100vw"
               />

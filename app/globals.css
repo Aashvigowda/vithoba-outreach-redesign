@@ -39,12 +39,12 @@
    * real, named number to reference instead of a guessed pixel value.
    * Keep it in sync with the header's actual rendered height.
    */
-  --header-height: 80px;
+  --header-height: 77px;
 }
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 68px;
+    --header-height: 77px;
   }
 }
 

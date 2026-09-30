@@ -17,7 +17,7 @@ export default function WhatWeBuild() {
     <section className="bg-[#0c0d09] py-20 text-on-dark md:py-28">
       <div className="wrap">
         <Reveal>
-          <p className="eyebrow-dark font-mono-vo mb-6">04 — What We Build</p>
+          <p className="eyebrow-dark font-mono-vo mb-6">04 / What We Build</p>
           <h2 className="max-w-2xl font-display text-[clamp(2rem,4.5vw,3rem)] font-bold uppercase leading-[1.1] text-on-dark">
             Good marketing
             <br />
@@ -56,7 +56,7 @@ export default function WhatWeBuild() {
             </h3>
             <p className="mt-4 text-[15px] leading-relaxed text-on-dark-dim">{website.intro}</p>
             <p className="mt-4 text-[15px] leading-relaxed text-on-dark-dim">
-              <span className="font-semibold text-on-dark">Who it&rsquo;s for — </span>
+              <span className="font-semibold text-on-dark">Who it&rsquo;s for: </span>
               {website.whoFor}
             </p>
             <Link

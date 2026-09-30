@@ -6,7 +6,7 @@ export const site = {
   domain: "https://www.vithobaoutreach.com",
   tagline: "Trust the strategy, grow with Vithoba.",
   positioning:
-    "Vithoba Outreach plans, builds and runs the marketing engine for ambitious Indian businesses — strategy, content, ads and automation working as one system.",
+    "Vithoba Outreach plans, builds and runs the marketing engine for ambitious Indian businesses: strategy, content, ads and automation working as one system.",
   city: "Mysuru",
   region: "Karnataka",
   country: "India",
@@ -45,7 +45,7 @@ export const process = [
   {
     step: "01",
     name: "Discover",
-    text: "We audit what exists – your brand, channels and competitors – before recommending anything.",
+    text: "We audit what exists (your brand, channels and competitors) before recommending anything.",
     tag: "No guesswork",
   },
   {
@@ -57,7 +57,7 @@ export const process = [
   {
     step: "03",
     name: "Launch",
-    text: "Content, ads, pages and automations go live – built and managed end-to-end.",
+    text: "Content, ads, pages and automations go live, built and managed end-to-end.",
     tag: "Managed end-to-end",
   },
   {
@@ -88,7 +88,7 @@ export const packages: Package[] = [
     priceHigh: "₹20,000/mo",
     items: [
       "Social media management",
-      "Basic content – posts + 1 reel/week",
+      "Basic content: posts + 1 reel/week",
       "Basic ads management",
       "Monthly report",
     ],
@@ -156,14 +156,14 @@ export const services: Service[] = [
   {
     number: "01",
     slug: "digital-marketing",
-    title: "Digital Marketing Services in Mysuru",
-    navLabel: "Digital Marketing",
+    title: "Digital Marketing Strategy Services in Mysuru",
+    navLabel: "Digital Marketing Strategy",
     tagline: "Your entire growth system, planned as one.",
     stage: "The System",
     pillar: "Strategy",
-    seoTitle: "Digital Marketing Services in Mysuru | Vithoba Outreach",
+    seoTitle: "Digital Marketing Strategy Services in Mysuru | Vithoba Outreach",
     seoDescription:
-      "Digital marketing services in Mysuru: strategy, social media, Google & Meta Ads, websites and automation, run as one system by Vithoba Outreach.",
+      "Digital marketing strategy services in Mysuru: strategy, social media, Google & Meta Ads, websites and automation, run as one system by Vithoba Outreach.",
     intro:
       "Vithoba Outreach is a digital marketing agency in Mysuru. We plan, build and run the whole marketing engine for your business, so strategy, content, ads and follow-up work together instead of in silos.",
     included: [
@@ -674,20 +674,12 @@ export const homeFaqs = [
     a: "Yes. Vithoba Outreach is headquartered in Kuvempu Nagara, Mysuru, and works with businesses in Mysuru and across India.",
   },
   {
-    q: "How much does digital marketing cost in Mysuru?",
-    a: "Our monthly packages start at ₹15,000 to ₹20,000 (Starter), ₹25,000 to ₹40,000 (Growth) and ₹50,000+ (Premium). Ad spend is billed separately, and final pricing depends on scope, industry and business size.",
-  },
-  {
-    q: "Do you work with real estate companies?",
-    a: "Yes. We run lead generation, Google and Meta ads, landing pages and WhatsApp follow-up for builders, developers and property businesses.",
-  },
-  {
     q: "Do you provide SEO services?",
     a: "Yes. We help with local SEO, on-page optimisation, content planning and Google Business Profile support. SEO builds over months and we do not guarantee rankings.",
   },
   {
     q: "Do you manage Google and Meta Ads?",
-    a: "Yes. We set up and manage Google Ads and Meta Ads campaigns. Ad spend goes directly to the platforms and is billed separately from our fee.",
+    a: "Yes. We set up and manage Google Ads and Meta Ads campaigns.",
   },
   {
     q: "How do you generate leads for businesses?",
@@ -698,16 +690,8 @@ export const homeFaqs = [
     a: "Most clients see visibility and engagement improve within the first 3 to 6 weeks. Lead and sales growth typically builds over 60 to 90 days as campaigns are tested and optimised.",
   },
   {
-    q: "Is ad spend included in your fees?",
-    a: "No. Our packages cover our service fee only: strategy, management and execution. Ad spend is billed separately and goes directly toward your campaigns.",
-  },
-  {
     q: "Do I need to sign a long-term contract?",
     a: "We require a minimum 3-month commitment, because marketing needs a few months to show real results.",
-  },
-  {
-    q: "Can I mix and match services instead of taking a full package?",
-    a: "Yes. Our pricing section lets you build a custom mix of services if a full monthly retainer is not what you need yet.",
   },
 ];
 

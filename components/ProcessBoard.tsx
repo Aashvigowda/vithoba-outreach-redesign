@@ -7,7 +7,7 @@ import { useState } from "react";
 // built and managed end-to-end") splits naturally into Create (built) and
 // Launch (go live). Nothing here is invented, just re-paced for the board.
 const stages = [
-  { number: "01", name: "Understand", text: "We audit what exists — your brand, channels and competitors — before recommending anything." },
+  { number: "01", name: "Understand", text: "We audit what exists (your brand, channels and competitors) before recommending anything." },
   { number: "02", name: "Strategize", text: "A clear strategy and calendar, matched to your budget and the package that fits." },
   { number: "03", name: "Create", text: "Content, ads, pages and automations are built and prepared to go live." },
   { number: "04", name: "Launch", text: "Everything goes into market and starts running, managed end-to-end." },

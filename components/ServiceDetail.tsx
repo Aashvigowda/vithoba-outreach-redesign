@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import Reveal from "./Reveal";
 import JsonLd from "./JsonLd";
 import ServicesBanner from "./ServicesBanner";
@@ -37,8 +36,8 @@ function ArrowRight() {
   );
 }
 
-// Laid out after the template's /service/service-details page: banner, wide
-// image, sticky "All Services" sidebar, content blocks, check-list and FAQ.
+// Laid out after the template's /service/service-details page: banner,
+// sticky "All Services" sidebar, content blocks, check-list and FAQ.
 export default function ServiceDetail({ service }: { service: Service }) {
   const Icon = serviceIcons[service.slug];
   const faqs = service.faqs.filter((f) => !PRICING.test(f.q) && !PRICING.test(f.a));
@@ -67,18 +66,6 @@ export default function ServiceDetail({ service }: { service: Service }) {
 
       <section className={styles.sectionPadding}>
         <div className={styles.container}>
-          <Reveal>
-            <div className={styles.detailsImage}>
-              <Image
-                src="/hero-visual.png"
-                alt="Laptop and phone showing marketing performance dashboards, surrounded by social, ads and email icons"
-                fill
-                priority
-                sizes="(min-width: 1320px) 1290px, 100vw"
-              />
-            </div>
-          </Reveal>
-
           <div className={styles.detailsRow}>
             <aside className={styles.sidebar}>
               <div className={styles.sidebarWidget}>

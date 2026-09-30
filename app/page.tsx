@@ -11,9 +11,11 @@ import HowWeWork from "@/components/HowWeWork";
 import CallbackForm from "@/components/CallbackForm";
 import WhyChooseVithoba from "@/components/WhyChooseVithoba";
 import HeroSearch from "@/components/HeroSearch";
+import HeroCycleWord from "@/components/HeroCycleWord";
 import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
 import { homeFaqs, site, waLink, waMessages } from "@/lib/content";
+import { poppins } from "./services/fonts";
 
 export const metadata: Metadata = {
   title: "Digital Marketing Agency in Mysuru | Vithoba Outreach",
@@ -35,7 +37,7 @@ export default function HomePage() {
 
       {/* HERO: sits below the sticky navbar in normal flow (no overlap possible). */}
       {/* min-height targets nav + hero ≈ one viewport, without clipping content on short screens. */}
-      <section className="relative isolate min-h-[calc(100vh-var(--header-height))] overflow-hidden">
+      <section className={`${poppins.variable} relative isolate min-h-[calc(100vh-var(--header-height))] overflow-hidden`}>
         <Image
           src="/hero-visual.png"
           alt=""
@@ -47,23 +49,24 @@ export default function HomePage() {
           aria-hidden="true"
           className="absolute inset-0 -z-10 bg-[linear-gradient(100deg,rgba(18,52,31,0.95)_0%,rgba(18,52,31,0.85)_38%,rgba(18,52,31,0.55)_65%,rgba(18,52,31,0.72)_100%)]"
         />
-        <div className="wrap relative z-10 flex min-h-[calc(100vh-var(--header-height))] flex-col justify-center py-16">
-          <Reveal className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-dark/60 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-on-dark backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+        {/* Hero runs wider than .wrap so the copy sits near the left edge, as on the live site. */}
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-var(--header-height))] w-full max-w-[1920px] flex-col justify-center px-6 py-16 sm:px-10 lg:px-[60px]">
+          <Reveal className="max-w-[860px]">
+            <span className="inline-flex items-center gap-3 rounded-full border border-on-dark/25 bg-dark/20 px-5 py-2.5 font-mono-vo text-[11px] font-medium uppercase tracking-[0.22em] text-on-dark/85 backdrop-blur-sm sm:text-xs">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent-bright" />
               Digital Marketing Studio
             </span>
-            <h1 className="mt-7 font-display text-[clamp(2.5rem,6.5vw,4.6rem)] font-bold leading-[1.02] text-on-dark">
+            {/* Tagline copied from the live vithobaoutreach.com hero: Poppins 700,
+                38px on small screens up to 62px, cycling gold italic word. */}
+            <h1
+              style={{ fontFamily: "var(--font-poppins), var(--font-display)" }}
+              className="mt-8 text-[clamp(38px,4.4vw,62px)] font-bold leading-[1.04] tracking-[-0.02em] text-on-dark"
+            >
               Strategy that grows
               <br />
-              <span style={{ fontFamily: "var(--font-accent-serif)" }} className="italic text-on-dark">
-                your
-              </span>{" "}
-              <span style={{ fontFamily: "var(--font-accent-serif)" }} className="italic text-accent-bright">
-                sales.
-              </span>
+              your <HeroCycleWord />.
             </h1>
-            <p className="mt-7 max-w-lg text-lg leading-relaxed text-on-dark-dim">
+            <p className="mt-6 max-w-[600px] text-base leading-relaxed text-on-dark/80 md:text-lg md:leading-[1.7]">
               {site.positioning}
             </p>
             <HeroSearch />
@@ -82,7 +85,7 @@ export default function HomePage() {
                 Eight disciplines. <span className="text-accent">One growth system.</span>
               </>
             }
-            description="Everything Vithoba Outreach can plan, design and run for your brand — built to work together, not in silos."
+            description="Everything Vithoba Outreach can plan, design and run for your brand, built to work together, not in silos."
             className="mb-8"
           />
           <ServicesShowcase />
@@ -135,7 +138,7 @@ export default function HomePage() {
                 </span>
               </>
             }
-            description="Strategy, content, SEO, ads, your website and automation — one connected system built to move your business forward."
+            description="Strategy, content, SEO, ads, your website and automation: one connected system built to move your business forward."
           />
           <MarketingOrbit />
         </div>

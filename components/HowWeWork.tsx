@@ -22,7 +22,7 @@ export default function HowWeWork() {
               .
             </>
           }
-          description="The same four stages, every time — so nothing gets lost between strategy and execution."
+          description="The same four stages, every time, so nothing gets lost between strategy and execution."
           className="mb-10"
         />
 

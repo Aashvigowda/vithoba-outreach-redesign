@@ -38,7 +38,7 @@ export default function BlogIndexPage() {
         eyebrow="Insights"
         breadcrumb={[{ name: "Home", href: "/" }, { name: "Blog" }]}
         title="Insights: Digital Marketing for Mysuru Businesses"
-        description="Field notes on pricing, ads and lead generation — written for businesses in Mysuru, not for search engines."
+        description="Field notes on pricing, ads and lead generation, written for businesses in Mysuru, not for search engines."
       />
 
       <section className="wrap border-t border-line py-20 md:py-28">

@@ -157,6 +157,18 @@
   width: 12px;
   height: auto;
 }
+/* On tablet-width screens there's no room to the right, so open leftwards. */
+@media (max-width: 1279px) {
+  .submenu .flyout {
+    left: auto;
+    right: 100%;
+    transform: translateX(10px);
+  }
+  .submenu .flyout::before {
+    left: auto;
+    right: -12px;
+  }
+}
 .hasFlyout:hover > .flyout,
 .hasFlyout:focus-within > .flyout,
 .hasFlyout[data-open="true"] > .flyout {

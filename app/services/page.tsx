@@ -199,11 +199,11 @@ export default function ServicesPage() {
             <div className={styles.testimonialImage}>
               <Reveal>
                 <Image
-                  src="/hero-visual.png"
-                  alt="Laptop and phone showing marketing performance dashboards, surrounded by social, ads and email icons"
-                  width={1536}
-                  height={1024}
-                  sizes="(min-width: 992px) 480px, 100vw"
+                  src="/services-how-we-work.png"
+                  alt="Desk with a laptop showing growth charts, a phone and a notebook, surrounded by a megaphone, a target and Instagram, LinkedIn, YouTube, X and Facebook icons"
+                  width={1320}
+                  height={1192}
+                  sizes="(min-width: 992px) 600px, 100vw"
                 />
               </Reveal>
               <div className={styles.rocketShape} aria-hidden="true">

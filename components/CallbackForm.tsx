@@ -34,30 +34,37 @@ export default function CallbackForm() {
   return (
     <section className="bg-dark text-on-dark">
       <div className="grid md:grid-cols-2">
-        {/* LEFT: intro panel */}
-        <Reveal className="relative isolate flex min-h-[320px] flex-col justify-between p-10 sm:p-12 md:min-h-[620px] md:p-16 lg:p-20">
-          <Image src="/hero-visual.png" alt="" fill className="-z-20 object-cover" />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 -z-10 bg-[linear-gradient(160deg,rgba(18,52,31,0.96)_0%,rgba(18,52,31,0.88)_45%,rgba(18,52,31,0.55)_100%)]"
-          />
-          <div className="max-w-md">
-            <h2 className="font-display text-3xl font-bold leading-tight text-on-dark sm:text-4xl">
-              Want to know more about Vithoba Outreach?
-            </h2>
-            <p className="mt-4 text-on-dark-dim">We&apos;re here to talk — enquire now.</p>
+        {/* LEFT: intro panel. Light panel matched to the illustration's own
+            background (#f6edda) so the image sits in it seamlessly. */}
+        <Reveal className="relative flex min-h-[320px] flex-col overflow-hidden bg-[#f6edda] md:min-h-[620px]">
+          <div className="p-10 pb-6 sm:p-12 sm:pb-6 md:p-16 md:pb-8 lg:p-20 lg:pb-8">
+            <div className="max-w-md">
+              <h2 className="font-display text-3xl font-bold leading-tight text-dark sm:text-4xl">
+                Want to know more about Vithoba Outreach?
+              </h2>
+              <p className="mt-4 text-ink-2">We&apos;re here to talk. Enquire now.</p>
+            </div>
+            <div className="mt-8 flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt=""
+                width={32}
+                height={32}
+                className="h-8 w-8 rounded-full object-cover"
+              />
+              <span className="font-mono-vo text-xs uppercase tracking-widest text-dark">
+                Vithoba Outreach
+              </span>
+            </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="relative mt-auto aspect-[1947/808] w-full">
             <Image
-              src="/logo.png"
-              alt=""
-              width={32}
-              height={32}
-              className="h-8 w-8 rounded-full object-cover"
+              src="/enquiry-growth.png"
+              alt="Desk with a laptop showing growth charts, a lightbulb and a staircase of marketing icons rising to a target"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover object-left-bottom"
             />
-            <span className="font-mono-vo text-xs uppercase tracking-widest text-on-dark">
-              Vithoba Outreach
-            </span>
           </div>
         </Reveal>
 
