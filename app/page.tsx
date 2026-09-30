@@ -37,8 +37,8 @@ export default function HomePage() {
 
       {/* HERO: sits below the sticky navbar in normal flow (no overlap possible). */}
       {/* min-height targets nav + hero ≈ one viewport, without clipping content on short screens. */}
-      {/* Below md the 3:2 image can't cover a tall, narrow hero without heavy cropping, so it
-          sits whole along the bottom (66.7vw tall) under the copy, fading into the green. */}
+      {/* Below md the image stays a full-bleed background, framed on the laptop and icons,
+          under a top-to-bottom gradient so the copy reads and the picture shows lower down. */}
       <section className={`${poppins.variable} relative isolate min-h-[calc(100vh-var(--header-height))] overflow-hidden`}>
         <Image
           src="/hero-visual.png"
@@ -46,14 +46,14 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="-z-20 object-contain object-bottom md:object-cover md:object-center"
+          className="-z-20 object-cover object-[62%_center] md:object-center"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,var(--dark)_0%,var(--dark)_calc(100%_-_66.7vw),rgba(18,52,31,0)_calc(100%_-_66.7vw_+_80px))] md:bg-[linear-gradient(100deg,rgba(18,52,31,0.95)_0%,rgba(18,52,31,0.85)_38%,rgba(18,52,31,0.55)_65%,rgba(18,52,31,0.72)_100%)]"
+          className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(18,52,31,0.94)_0%,rgba(18,52,31,0.8)_45%,rgba(18,52,31,0.45)_100%)] md:bg-[linear-gradient(100deg,rgba(18,52,31,0.95)_0%,rgba(18,52,31,0.85)_38%,rgba(18,52,31,0.55)_65%,rgba(18,52,31,0.72)_100%)]"
         />
         {/* Hero runs wider than .wrap so the copy sits near the left edge, as on the live site. */}
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-var(--header-height))] w-full max-w-[1920px] flex-col justify-center px-6 pt-12 pb-[calc(66.7vw_+_24px)] sm:px-10 md:py-16 lg:px-[60px]">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-var(--header-height))] w-full max-w-[1920px] flex-col justify-center px-6 py-16 sm:px-10 lg:px-[60px]">
           <Reveal className="max-w-[860px]">
             <span className="inline-flex items-center gap-3 rounded-full border border-on-dark/25 bg-dark/20 px-5 py-2.5 font-mono-vo text-[11px] font-medium uppercase tracking-[0.22em] text-on-dark/85 backdrop-blur-sm sm:text-xs">
               <span className="h-1.5 w-1.5 rounded-full bg-accent-bright" />

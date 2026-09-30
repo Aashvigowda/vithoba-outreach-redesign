@@ -19,7 +19,7 @@ export default function HeroSearch() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center"
+      className="mt-10 flex flex-col items-center gap-5 sm:flex-row"
     >
       <div className="flex w-full max-w-[550px] items-center gap-3 rounded-full border border-on-dark/20 bg-dark/70 pl-5 pr-2 sm:pl-7 backdrop-blur-sm focus-within:border-accent sm:w-[550px]">
         <input
