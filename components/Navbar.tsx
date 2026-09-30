@@ -47,10 +47,13 @@ export default function Navbar() {
     setOpen(false);
   }
 
+  // Lock page scroll on <body>, not <html>: body's overflow then applies to the
+  // viewport, whereas locking <html> turns body (overflow-x: hidden) into its
+  // own scroll box, which unpins the sticky header and traps touch scrolling.
   useEffect(() => {
-    document.documentElement.style.overflow = open ? "hidden" : "";
+    document.body.style.overflow = open ? "hidden" : "";
     return () => {
-      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
     };
   }, [open]);
 

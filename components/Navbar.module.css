@@ -187,10 +187,15 @@
 
 /* ---------- Mobile menu accordion ---------- */
 /* Page scroll is locked while the menu is open, so the panel scrolls itself
-   once expanded sections outgrow the screen (77px = header bar height). */
+   once expanded sections outgrow the screen. Pinned between the header bar
+   (77px tall) and the screen's bottom edge so its height never depends on
+   vh units, which mobile browsers size differently around the URL bar. */
 .mobilePanel {
-  max-height: calc(100vh - 77px);
-  max-height: calc(100dvh - 77px);
+  position: fixed;
+  top: 77px;
+  right: 0;
+  bottom: 0;
+  left: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
