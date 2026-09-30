@@ -21,13 +21,13 @@ export default function HeroSearch() {
       onSubmit={handleSubmit}
       className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center"
     >
-      <div className="flex w-full max-w-[550px] items-center rounded-full border border-on-dark/20 bg-dark/70 pl-7 pr-2 backdrop-blur-sm focus-within:border-accent sm:w-[550px]">
+      <div className="flex w-full max-w-[550px] items-center gap-3 rounded-full border border-on-dark/20 bg-dark/70 pl-5 pr-2 sm:pl-7 backdrop-blur-sm focus-within:border-accent sm:w-[550px]">
         <input
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="What are you looking to grow?"
-          className="w-full bg-transparent py-5 text-base text-on-dark placeholder:text-on-dark-dim focus:outline-none md:text-lg"
+          className="w-full min-w-0 text-ellipsis bg-transparent py-5 text-[15px] text-on-dark sm:text-base placeholder:text-on-dark-dim focus:outline-none md:text-lg"
         />
         <button
           type="submit"
