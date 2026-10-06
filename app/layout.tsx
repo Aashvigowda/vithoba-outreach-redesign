@@ -51,9 +51,6 @@ export const metadata: Metadata = {
     card: "summary",
     images: ["/logo.png"],
   },
-  icons: {
-    icon: "/logo.png",
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
