@@ -405,7 +405,7 @@
   font-size: 40px;
   font-weight: 600;
   line-height: 1.2;
-  color: var(--t-header);
+  color: var(--accent);
   margin-bottom: 110px;
 }
 @media (max-width: 575px) {
@@ -415,6 +415,7 @@
 }
 .resultsCard h3 {
   margin-bottom: 10px;
+  color: var(--accent);
 }
 .resultsThumb {
   flex: 1;
