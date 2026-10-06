@@ -177,7 +177,7 @@ export default function MarketingOrbit() {
                 style={{ left: `${p.x}%`, top: `${p.y}%` }}
                 className={`absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-0.5 rounded-full border text-center transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg ${
                   isActive
-                    ? "z-10 h-[76px] w-[76px] scale-105 border-accent bg-surface shadow-[0_10px_26px_rgba(201,151,31,0.28)] lg:h-24 lg:w-24"
+                    ? "z-10 h-[76px] w-[76px] scale-105 border-accent bg-surface shadow-[0_10px_26px_rgba(212,175,55,0.28)] lg:h-24 lg:w-24"
                     : isRelated
                     ? "h-16 w-16 border-accent/50 bg-surface lg:h-20 lg:w-20"
                     : "h-16 w-16 border-line bg-surface-2 lg:h-20 lg:w-20"

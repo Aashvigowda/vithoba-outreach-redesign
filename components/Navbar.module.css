@@ -1,3 +1,19 @@
+/*
+ * Light header on the dark site, matching the live vithobaoutreach.com nav:
+ * cream bar, deep-green links, gold on hover. Re-scoping the tokens here
+ * flips the header, dropdowns and mobile panel together.
+ */
+.theme {
+  --surface: #f6f1e3;
+  --ink: #0a2117;
+  --ink-2: #0a2117;
+  --line: rgba(10, 33, 23, 0.08);
+  --line-strong: rgba(10, 33, 23, 0.18);
+  /* --accent gold is ~2:1 on cream; darker gold keeps hover/active text legible */
+  --accent-text: #7d6312;
+  box-shadow: 0 6px 24px rgba(10, 33, 23, 0.06);
+}
+
 /* Services dropdown, after the Digtek template's header submenu. */
 
 .dropItem {

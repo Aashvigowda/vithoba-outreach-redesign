@@ -15,8 +15,8 @@ export default function ServicesBanner({
     <section className={styles.breadcrumb}>
       <div className={styles.bcLeftShape} aria-hidden="true">
         <svg width="140" height="330" viewBox="0 0 140 330" fill="none">
-          <path d="M0 0c80 40 120 110 90 170S60 290 0 330Z" fill="#c9971f" fillOpacity=".12" />
-          <circle cx="40" cy="120" r="7" fill="#c9971f" fillOpacity=".55" />
+          <path d="M0 0c80 40 120 110 90 170S60 290 0 330Z" fill="#d4af37" fillOpacity=".12" />
+          <circle cx="40" cy="120" r="7" fill="#d4af37" fillOpacity=".55" />
           <circle cx="70" cy="215" r="4" fill="#12341f" fillOpacity=".35" />
         </svg>
       </div>
@@ -26,10 +26,10 @@ export default function ServicesBanner({
           <path d="M250 60c-80 50-150 110-110 190s60 120 30 198h80Z" fill="#12341f" fillOpacity=".05" />
           <circle cx="140" cy="205" r="36" fill="#12341f" />
           <circle cx="140" cy="205" r="26" fill="#fff" />
-          <circle cx="140" cy="205" r="17" fill="#c9971f" />
+          <circle cx="140" cy="205" r="17" fill="#d4af37" />
           <circle cx="140" cy="205" r="7" fill="#fff" />
           <path d="M142 203 196 181" stroke="#4d5445" strokeWidth="4" strokeLinecap="round" />
-          <path d="m190 172 16 4-6 12-12-4Z" fill="#c9971f" />
+          <path d="m190 172 16 4-6 12-12-4Z" fill="#d4af37" />
         </svg>
       </div>
       <div className={styles.container}>

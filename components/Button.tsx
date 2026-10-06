@@ -19,11 +19,11 @@ export default function Button({
     "inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold tracking-tight transition-all duration-300";
   const styles: Record<string, string> = {
     solid:
-      "bg-dark text-on-dark hover:-translate-y-0.5 hover:bg-dark-2 hover:shadow-[0_14px_32px_rgba(18,52,31,0.28)]",
+      "bg-dark text-on-dark hover:-translate-y-0.5 hover:bg-dark-2 hover:shadow-[0_14px_32px_rgba(10,33,23,0.28)]",
     outline:
-      "border border-line-strong text-ink hover:border-dark hover:-translate-y-0.5",
+      "border border-line-strong text-ink hover:border-accent hover:-translate-y-0.5",
     accent:
-      "bg-accent text-accent-ink hover:-translate-y-0.5 hover:bg-accent-bright hover:shadow-[0_14px_32px_rgba(201,151,31,0.3)]",
+      "bg-accent text-accent-ink hover:-translate-y-0.5 hover:bg-accent-bright hover:shadow-[0_14px_32px_rgba(212,175,55,0.3)]",
     ghost: "rounded-none px-0 py-0 text-ink hover:text-accent",
   };
 

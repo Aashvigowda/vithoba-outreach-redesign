@@ -50,7 +50,7 @@ export default function HomePage() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(18,52,31,0.94)_0%,rgba(18,52,31,0.8)_45%,rgba(18,52,31,0.45)_100%)] md:bg-[linear-gradient(100deg,rgba(18,52,31,0.95)_0%,rgba(18,52,31,0.85)_38%,rgba(18,52,31,0.55)_65%,rgba(18,52,31,0.72)_100%)]"
+          className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(10,33,23,0.94)_0%,rgba(10,33,23,0.8)_45%,rgba(10,33,23,0.45)_100%)] md:bg-[linear-gradient(100deg,rgba(10,33,23,0.95)_0%,rgba(10,33,23,0.85)_38%,rgba(10,33,23,0.55)_65%,rgba(10,33,23,0.72)_100%)]"
         />
         {/* Hero runs wider than .wrap so the copy sits near the left edge, as on the live site. */}
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-var(--header-height))] w-full max-w-[1920px] flex-col justify-center px-6 py-16 sm:px-10 lg:px-[60px]">

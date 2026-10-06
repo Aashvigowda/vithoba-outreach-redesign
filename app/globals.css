@@ -1,29 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  /* Light page (logo cream/white) */
-  --bg: #f8f5ec;
-  --surface: #ffffff;
-  --surface-2: #f0ecdd;
-  --line: rgba(18, 24, 18, 0.09);
-  --line-strong: rgba(18, 24, 18, 0.16);
-  --ink: #12180f;
-  --ink-2: #4d5445;
-  --ink-dim: #8b9280;
+  /*
+   * Dark theme matching the live site (vithobaoutreach.com): near-black
+   * forest-green page, raised green surfaces, cream text, gold accents.
+   */
+  --olive: #6d7b1a;
+  --olive-bright: #98a02a;
+  --moss: #46560d;
+  --sage: #7f8975;
+  --sand: #dfcf9f;
 
-  /* Accent = logo gold, used sparingly for badges/highlights/active states */
-  --accent: #c9971f;
-  --accent-bright: #e0b23a;
-  --accent-dim: rgba(201, 151, 31, 0.14);
-  --accent-ink: #14150e;
-  /* --accent fails WCAG AA (~2.4:1) as text color directly on cream — use
-     this darker shade whenever gold sits on a light background as an actual
-     word/heading rather than a background/border/badge fill. */
-  --accent-text: #a67c1a;
+  /* Page and raised surfaces */
+  --bg: #0a2117;
+  --bg-2: #0d2a1d; /* alternate section band, one step up from --bg */
+  --surface: #12341f; /* cards, navbar, panels */
+  --surface-2: #173d26;
+  --line: rgba(246, 241, 227, 0.1);
+  --line-strong: rgba(246, 241, 227, 0.18);
+  --ink: #f6f1e3;
+  --ink-2: #a9b7a0;
+  --ink-dim: #728069;
 
-  /* Dark band = logo forest green, stands in for "black" panels/buttons */
+  /* Accent = gold, used sparingly for badges/highlights/active states */
+  --accent: #d4af37;
+  --accent-bright: #f2ce6e;
+  --accent-dim: rgba(212, 175, 55, 0.14);
+  --accent-ink: #0a2117;
+  /* Gold reads fine as text on the dark page; kept as its own token so
+     gold-as-text call sites stay separate from gold fills. */
+  --accent-text: #d4af37;
+
+  /* Dark band: raised green panels/buttons, distinct from the --bg page */
   --dark: #12341f;
-  --dark-2: #17422a;
+  --dark-2: #173d26;
   --dark-line: rgba(246, 241, 227, 0.14);
   --on-dark: #f6f1e3;
   --on-dark-dim: #a9b7a0;
@@ -50,6 +60,7 @@
 
 @theme inline {
   --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
   --color-line: var(--line);
@@ -60,12 +71,18 @@
   --color-accent: var(--accent);
   --color-accent-bright: var(--accent-bright);
   --color-accent-ink: var(--accent-ink);
+  --color-accent-dim: var(--accent-dim);
   --color-accent-deep: var(--accent-text);
   --color-dark: var(--dark);
   --color-dark-2: var(--dark-2);
   --color-dark-line: var(--dark-line);
   --color-on-dark: var(--on-dark);
   --color-on-dark-dim: var(--on-dark-dim);
+  --color-olive: var(--olive);
+  --color-olive-bright: var(--olive-bright);
+  --color-moss: var(--moss);
+  --color-sage: var(--sage);
+  --color-sand: var(--sand);
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono-vo: var(--font-jetbrains-mono), ui-monospace, monospace;

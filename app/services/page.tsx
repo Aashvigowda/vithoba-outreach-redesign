@@ -70,18 +70,18 @@ export default function ServicesPage() {
         <div className={styles.floatShape} aria-hidden="true">
           <svg width="150" height="200" viewBox="0 0 150 200" fill="none">
             <path d="M75 10c28 20 40 58 34 100H41C35 68 47 30 75 10Z" fill="#12341f" />
-            <circle cx="75" cy="70" r="14" fill="#f8f4e8" />
-            <circle cx="75" cy="70" r="8" fill="#c9971f" />
-            <path d="M41 110 22 140l26-8M109 110l19 30-26-8" fill="#c9971f" />
-            <path d="M60 116h30l-6 26c-3 12-15 12-18 0Z" fill="#e0b23a" fillOpacity=".8" />
+            <circle cx="75" cy="70" r="14" fill="#f7f3e6" />
+            <circle cx="75" cy="70" r="8" fill="#d4af37" />
+            <path d="M41 110 22 140l26-8M109 110l19 30-26-8" fill="#d4af37" />
+            <path d="M60 116h30l-6 26c-3 12-15 12-18 0Z" fill="#f2ce6e" fillOpacity=".8" />
           </svg>
         </div>
         <div className={styles.floatShape2} aria-hidden="true">
           <svg width="120" height="160" viewBox="0 0 120 160" fill="none">
             <rect x="14" y="40" width="92" height="104" rx="14" fill="#fff" stroke="#e5e5e5" />
-            <rect x="30" y="100" width="12" height="28" rx="3" fill="#c9971f" />
+            <rect x="30" y="100" width="12" height="28" rx="3" fill="#d4af37" />
             <rect x="54" y="84" width="12" height="44" rx="3" fill="#12341f" />
-            <rect x="78" y="64" width="12" height="64" rx="3" fill="#c9971f" />
+            <rect x="78" y="64" width="12" height="64" rx="3" fill="#d4af37" />
           </svg>
         </div>
         <div className={styles.container}>
@@ -99,8 +99,8 @@ export default function ServicesPage() {
                     <text x="16" y="28" fontSize="13" fill="#4d5445" fontFamily="inherit">Growth</text>
                     <rect x="124" y="14" width="62" height="22" rx="6" fill="#f7f3e6" />
                     <text x="134" y="29" fontSize="10" fill="#12341f" fontFamily="inherit">Monthly ▾</text>
-                    <text x="16" y="66" fontSize="30" fontWeight="800" fill="#12180f" fontFamily="inherit">Leads</text>
-                    <path d="M14 118c16-2 22-30 40-30s22 22 40 20 22-34 40-34 22 34 52 44" stroke="#c9971f" strokeWidth="2.5" fill="none" />
+                    <text x="16" y="66" fontSize="30" fontWeight="800" fill="#12341f" fontFamily="inherit">Leads</text>
+                    <path d="M14 118c16-2 22-30 40-30s22 22 40 20 22-34 40-34 22 34 52 44" stroke="#d4af37" strokeWidth="2.5" fill="none" />
                     <path d="M14 122c20 0 26-12 40-14s18-28 40-30 26 26 44 30 26 6 48 8" stroke="#12341f" strokeWidth="2.5" fill="none" />
                     <rect x="14" y="134" width="172" height="16" rx="3" fill="#f7f3e6" />
                     <rect x="22" y="139" width="150" height="6" rx="3" fill="#12341f" />
@@ -209,16 +209,16 @@ export default function ServicesPage() {
               <div className={styles.rocketShape} aria-hidden="true">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                   <path d="M30 4c10 7 14 20 12 34H18C16 24 20 11 30 4Z" fill="#12341f" />
-                  <circle cx="30" cy="24" r="5" fill="#e0b23a" />
-                  <path d="M18 38l-8 12 10-3M42 38l8 12-10-3M24 40h12l-2 10c-1 5-7 5-8 0Z" fill="#c9971f" />
+                  <circle cx="30" cy="24" r="5" fill="#f2ce6e" />
+                  <path d="M18 38l-8 12 10-3M42 38l8 12-10-3M24 40h12l-2 10c-1 5-7 5-8 0Z" fill="#d4af37" />
                 </svg>
               </div>
               <div className={styles.msgShape} aria-hidden="true">
                 <svg width="70" height="56" viewBox="0 0 70 56" fill="none">
                   <path d="M8 2h54a6 6 0 0 1 6 6v30a6 6 0 0 1-6 6H26L12 54V44H8a6 6 0 0 1-6-6V8a6 6 0 0 1 6-6Z" fill="#fff" stroke="#e5e5e5" />
-                  <circle cx="22" cy="23" r="4" fill="#c9971f" />
+                  <circle cx="22" cy="23" r="4" fill="#d4af37" />
                   <circle cx="35" cy="23" r="4" fill="#12341f" />
-                  <circle cx="48" cy="23" r="4" fill="#c9971f" />
+                  <circle cx="48" cy="23" r="4" fill="#d4af37" />
                 </svg>
               </div>
             </div>

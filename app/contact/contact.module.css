@@ -24,7 +24,7 @@
   height: 100%;
   padding: 40px 20px;
   border-radius: 10px;
-  background: #f9f6ec;
+  background: var(--bg-2);
   text-align: center;
   transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
@@ -33,7 +33,7 @@
 }
 .infoIcon {
   display: inline-flex;
-  color: var(--dark);
+  color: var(--accent);
 }
 .infoIcon svg {
   width: 72px;
@@ -126,7 +126,7 @@
 .formClt textarea {
   width: 100%;
   padding: 18px 20px;
-  border: 1px solid #ddd6c2;
+  border: 1px solid var(--line-strong);
   border-radius: 5px;
   background-color: transparent;
   font: inherit;
@@ -154,8 +154,8 @@
   padding: 18px 30px;
   border: 0;
   border-radius: 8px;
-  background-color: var(--dark);
-  color: #fff;
+  background-color: var(--accent);
+  color: var(--accent-ink);
   font: inherit;
   font-size: 16px;
   font-weight: 600;
@@ -164,7 +164,7 @@
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 .submitBtn:hover {
-  background-color: var(--accent);
+  background-color: var(--accent-bright);
   color: var(--accent-ink);
 }
 .submitBtn:focus-visible {

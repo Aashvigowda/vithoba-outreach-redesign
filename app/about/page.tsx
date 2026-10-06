@@ -115,10 +115,10 @@ export default function AboutPage() {
                   <svg width="150" height="118" viewBox="0 0 150 118" fill="none">
                     <rect x=".5" y=".5" width="149" height="117" rx="14" fill="#fff" stroke="#e5e5e5" />
                     <text x="18" y="32" fontSize="12" fill="#4d5445" fontFamily="inherit">Monthly report</text>
-                    <rect x="18" y="74" width="14" height="26" rx="3" fill="#c9971f" fillOpacity=".5" />
-                    <rect x="42" y="62" width="14" height="38" rx="3" fill="#c9971f" fillOpacity=".75" />
+                    <rect x="18" y="74" width="14" height="26" rx="3" fill="#d4af37" fillOpacity=".5" />
+                    <rect x="42" y="62" width="14" height="38" rx="3" fill="#d4af37" fillOpacity=".75" />
                     <rect x="66" y="50" width="14" height="50" rx="3" fill="#12341f" />
-                    <rect x="90" y="58" width="14" height="42" rx="3" fill="#c9971f" />
+                    <rect x="90" y="58" width="14" height="42" rx="3" fill="#d4af37" />
                     <rect x="114" y="44" width="14" height="56" rx="3" fill="#12341f" />
                   </svg>
                 </div>
@@ -127,7 +127,7 @@ export default function AboutPage() {
                     <rect x=".5" y=".5" width="189" height="119" rx="14" fill="#fff" stroke="#e5e5e5" />
                     <text x="18" y="30" fontSize="12" fill="#4d5445" fontFamily="inherit">Enquiries</text>
                     <path d="M18 92c20-2 26-26 46-26s24 16 44 14 22-38 64-40" stroke="#12341f" strokeWidth="3" strokeLinecap="round" />
-                    <path d="M18 100c24 0 34-12 52-14s26 6 46 2 30-22 56-26" stroke="#c9971f" strokeWidth="3" strokeLinecap="round" />
+                    <path d="M18 100c24 0 34-12 52-14s26 6 46 2 30-22 56-26" stroke="#d4af37" strokeWidth="3" strokeLinecap="round" />
                   </svg>
                 </div>
                 <Link href="/services" className={styles.circleButton} aria-label="See our services">
@@ -137,7 +137,7 @@ export default function AboutPage() {
                       <defs>
                         <path id="about-text-circle" d="M55 55m-43 0a43 43 0 1 1 86 0a43 43 0 1 1-86 0" />
                       </defs>
-                      <text fontSize="10.5" fontWeight="700" letterSpacing="2.4" fill="#14150e">
+                      <text fontSize="10.5" fontWeight="700" letterSpacing="2.4" fill="#12341f">
                         <textPath href="#about-text-circle">VITHOBA OUTREACH • MYSURU • </textPath>
                       </text>
                     </svg>

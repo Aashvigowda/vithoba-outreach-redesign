@@ -42,7 +42,7 @@ export default function CallbackForm() {
               <h2 className="font-display text-3xl font-bold leading-tight text-dark sm:text-4xl">
                 Want to know more about Vithoba Outreach?
               </h2>
-              <p className="mt-4 text-ink-2">We&apos;re here to talk. Enquire now.</p>
+              <p className="mt-4 text-[#4d5445]">We&apos;re here to talk. Enquire now.</p>
             </div>
             <div className="mt-8 flex items-center gap-3">
               <Image

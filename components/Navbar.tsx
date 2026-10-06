@@ -58,7 +58,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-surface">
+    <header className={`sticky top-0 z-50 border-b border-line bg-surface ${styles.theme}`}>
       <div className="wrap flex items-center justify-between py-3.5">
         <Link
           href="/"
@@ -104,7 +104,7 @@ export default function Navbar() {
                 }}
               >
                 <span className={styles.dropToggle}>
-                  <Link href={item.href} className="underline-link transition-colors hover:text-ink">
+                  <Link href={item.href} className="underline-link transition-colors hover:text-accent-deep">
                     {item.label}
                   </Link>
                   <button
@@ -113,7 +113,7 @@ export default function Navbar() {
                     aria-expanded={dropOpen === true}
                     aria-controls="services-submenu"
                     onClick={() => setDropOpen((v) => (v === true ? false : true))}
-                    className="flex h-6 w-6 items-center justify-center rounded-full text-ink-2 hover:text-ink"
+                    className="flex h-6 w-6 items-center justify-center rounded-full text-ink-2 hover:text-accent-deep"
                   >
                     <Chevron className={styles.chevron} />
                   </button>
@@ -154,7 +154,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="underline-link transition-colors hover:text-ink"
+                className="underline-link transition-colors hover:text-accent-deep"
               >
                 {item.label}
               </Link>

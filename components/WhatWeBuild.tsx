@@ -14,7 +14,7 @@ const social = getService("social-media-marketing")!;
 
 export default function WhatWeBuild() {
   return (
-    <section className="bg-[#0c0d09] py-20 text-on-dark md:py-28">
+    <section className="bg-bg-2 py-20 text-on-dark md:py-28">
       <div className="wrap">
         <Reveal>
           <p className="eyebrow-dark font-mono-vo mb-6">04 / What We Build</p>
@@ -32,7 +32,7 @@ export default function WhatWeBuild() {
               <span className="h-2.5 w-2.5 rounded-full bg-on-dark-dim" />
               <span className="h-2.5 w-2.5 rounded-full bg-on-dark-dim" />
               <span className="h-2.5 w-2.5 rounded-full bg-on-dark-dim" />
-              <span className="ml-2 h-2.5 flex-1 rounded-full bg-[#0c0d09]" />
+              <span className="ml-2 h-2.5 flex-1 rounded-full bg-bg-2" />
             </div>
             <div className="mt-8 grid gap-8 sm:grid-cols-2">
               <div>
