@@ -59,7 +59,7 @@ export default function HowWeWork() {
               <p className="font-mono-vo text-xs uppercase tracking-widest text-on-dark-dim">
                 Step {step.step}
               </p>
-              <h3 className="mt-2 font-display text-2xl font-bold text-on-dark">{step.name}</h3>
+              <h3 className="mt-2 font-display text-2xl font-bold text-accent">{step.name}</h3>
               <p className="mt-3 text-sm leading-relaxed text-on-dark-dim">{step.text}</p>
               <span className="mt-5 inline-flex rounded-full border border-dark-line bg-dark px-3 py-1 font-mono-vo text-[11px] uppercase tracking-widest text-on-dark-dim">
                 {step.tag}
